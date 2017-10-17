@@ -12,7 +12,7 @@
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.typist.tech/donate/wp-kses-view/)
 [![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://www.typist.tech/contact/)
 
-A simplified OOP implementation of the WordPress Options API.
+Safely rendering for WordPress, the OOP way.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -22,19 +22,7 @@ A simplified OOP implementation of the WordPress Options API.
 - [Install](#install)
 - [Usage](#usage)
   - [Example](#example)
-  - [ConstantStrategy](#constantstrategy)
-  - [DatabaseStrategy](#databasestrategy)
-  - [OptionStore](#optionstore)
-    - [`__construct(StrategyInterface ...$strategies)`](#__constructstrategyinterface-strategies)
-    - [`get(string $optionName)`](#getstring-optionname)
-  - [Type casting](#type-casting)
-  - [FilteredOptionStore](#filteredoptionstore)
-    - [`get(string $optionName)`](#getstring-optionname-1)
-  - [Factory](#factory)
-    - [`build(): FilteredOptionStore`](#build-filteredoptionstore)
 - [Frequently Asked Questions](#frequently-asked-questions)
-  - [Can I implement my own strategy classes?](#can-i-implement-my-own-strategy-classes)
-  - [Can I change the order of the strategies?](#can-i-change-the-order-of-the-strategies)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
 - [Support!](#support)
