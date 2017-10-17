@@ -1,0 +1,9 @@
+modules:
+    config:
+        WPLoader:
+            wpRootFolder: "/Users/me/Local Sites/wpadminnotices/app/public"
+            dbName: "local"
+            dbHost: "wp-kses-view.local:4026"
+            dbUser: "root"
+            dbPassword: "root"
+            domain: "wp-kses-view.local"
