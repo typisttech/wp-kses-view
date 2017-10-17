@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TypistTech\WPKsesView\Helper;
 
 use AspectMock\Test;
+use Codeception\Module;
 use Codeception\TestInterface;
 
 /**
