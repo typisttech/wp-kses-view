@@ -40,7 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TypistTech\\WPOptionStore\\": "src/"
+            "TypistTech\\WPKsesView\\": "src/"
         }
     },
     "scripts": {
