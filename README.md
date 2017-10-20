@@ -18,11 +18,17 @@ Safely rendering for WordPress, the OOP way.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [The Goals, or What This Package Does?](#the-goals-or-what-this-package-does)
 - [Install](#install)
 - [Usage](#usage)
-  - [Example](#example)
+  - [Static Example](#static-example)
+  - [Render with `Context` Example](#render-with-context-example)
+  - [View](#view)
+    - [`__construct(string $template, array $allowedHtml)`](#__constructstring-template-array-allowedhtml)
+    - [`echoKses($context = null)`](#echoksescontext--null)
+  - [Template](#template)
+  - [Factory & ViewAwareTrait](#factory--viewawaretrait)
 - [Frequently Asked Questions](#frequently-asked-questions)
+  - [Why some HTML tags are stripped out?](#why-some-html-tags-are-stripped-out)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
 - [Support!](#support)
@@ -40,8 +46,6 @@ Safely rendering for WordPress, the OOP way.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## The Goals, or What This Package Does?
-
 ## Install
 
 Installation should be done via composer, details of how to install composer can be found at [https://getcomposer.org/](https://getcomposer.org/).
@@ -57,9 +61,129 @@ You should put all `WP Kses View` classes under your own namespace to avoid clas
 
 ## Usage
 
-### Example
+### Static Example
+
+```php
+<?php
+// This is `template.php`.
+
+echo '<h1>Hello World!</h1>';
+echo '<p>Using PHP echo</p>';
+
+?>
+
+<p>Or, it can be plain HTML</p>
+<script>alert('XSS hacking!');</script>
+```
+
+```php
+use TypistTech\WPKsesView\View;
+
+$template = '/path/to/template.php';
+$view = new Factory::build($template);
+
+$view->echoKses();
+// This echos:
+// <h1>Hello World!</h1>
+// <p>Using PHP echo</p>
+// <p>Or, it can be plain HTML</p>
+// alert('XSS hacking!');
+```
+
+Note that `<script>` has been sanitized.
+
+### Render with `Context` Example
+
+```php
+// This is `template.php`.
+
+printf(
+    '%1$s has %2$d dragons.',
+    $context->name,
+    $context->dragons
+);
+```
+
+```php
+use TypistTech\WPKsesView\View;
+
+$template = '/path/to/template.php';
+$context = (object) [
+    'name' => 'Daenerys Targaryen',
+    'dragons' => 3,
+];
+$view = new Factory::build($template);
+
+$view->echoKses($context);
+// This echos:
+// Daenerys Targaryen has 3 dragons.
+```
+
+### View
+
+#### `__construct(string $template, array $allowedHtml)`
+
+`View` constructor.
+
+ * @param string $template    Filename of the template to render.
+ * @param array  $allowedHtml List of allowed HTML elements.
+ 
+`$allowedHtml` will later be passed to [`wp_kses`](https://codex.wordpress.org/Function_Reference/wp_kses).
+
+[`wp_kses_allowed_html('post')`](https://codex.wordpress.org/Function_Reference/wp_kses_allowed_html) is a good start if you not sure which HTML tags to use.
+
+```php
+$template = '/path/to/my/template.php';
+
+$view = new View(
+    $template,
+    wp_kses_allowed_html('post')
+);
+```
+
+#### `echoKses($context = null)`
+
+Echo safely.
+
+ * @param mixed $context Optional. Context object for which to render the view.
+
+```php
+$view->echoKses();
+
+$view->echoKses($someObject);
+```
+
+If you pass in a context object, you can reference it in your template as `$context`. 
+Think `$context` as the `M` in MVC pattern.
+
+### Template
+
+A template can be anything, not limited to `.php` files. Common use cases are: 
+ - `.php`
+ - `.html`
+ - `.js`
+
+If you pass in a context object, you can reference it in your template as `$context`.
+
+Think templates are `.erb` files under `app/view` directory in a Rails app.
+
+### Factory & ViewAwareTrait
+
+This package provides `Factory` and `ViewAwareTrait` to reduce boilerplate code for common use cases.
+Check their well-documented source code and their tests to learn more.
 
 ## Frequently Asked Questions
+
+### Why some HTML tags are stripped out?
+
+This is the heart of this package, removing dangerous HTML tags during rendering.
+
+To allow a HTML tag:
+ - Add the tag when instantiating a `view` object.
+ 
+Check [`wp_kses`'s document](https://codex.wordpress.org/Function_Reference/wp_kses) to learn more.
+
+When in doubt, [`wp_kses_allowed_html('post')`](https://codex.wordpress.org/Function_Reference/wp_kses_allowed_html) is a good start.
 
 ### Can two different plugins use this package at the same time?
 
@@ -74,6 +198,7 @@ Here you go:
 
  * [Sunny](https://github.com/Typisttech/sunny)
  * [WP Cloudflare Guard](https://github.com/TypistTech/wp-cloudflare-guard)
+ * [WP Admin Tabs](https://github.com/TypistTech/wp-admin-tabs)
 
 *Add your own plugin [here](https://github.com/TypistTech/wp-kses-view/edit/master/README.md)*
 
