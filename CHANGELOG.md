@@ -1,8 +1,17 @@
 # Change Log
 
+## [0.2.0](https://github.com/TypistTech/wp-kses-view/tree/0.2.0) (2017-10-22)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.1.0...0.2.0)
+
+**Merged pull requests:**
+
+- Rename: `ViewInterface::echoKses` -\> `::render` [\#6](https://github.com/TypistTech/wp-kses-view/pull/6) ([TangRufus](https://github.com/TangRufus))
+- Add `ViewAwareTraitInterface::render` [\#5](https://github.com/TypistTech/wp-kses-view/pull/5) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.1.0](https://github.com/TypistTech/wp-kses-view/tree/0.1.0) (2017-10-20)
 **Merged pull requests:**
 
+- Version bump 0.1.0 [\#4](https://github.com/TypistTech/wp-kses-view/pull/4) ([TangRufus](https://github.com/TangRufus))
 - Scrutinizer: Remove `align\_assignments` [\#3](https://github.com/TypistTech/wp-kses-view/pull/3) ([TangRufus](https://github.com/TangRufus))
 - Add `ViewAwareTrait` and `ViewAwareTraitInterface` [\#2](https://github.com/TypistTech/wp-kses-view/pull/2) ([TangRufus](https://github.com/TangRufus))
 - First release [\#1](https://github.com/TypistTech/wp-kses-view/pull/1) ([TangRufus](https://github.com/TangRufus))
