@@ -24,7 +24,7 @@ Safely rendering for WordPress, the OOP way.
   - [Render with `Context` Example](#render-with-context-example)
   - [View](#view)
     - [`__construct(string $template, array $allowedHtml)`](#__constructstring-template-array-allowedhtml)
-    - [`echoKses($context = null)`](#echoksescontext--null)
+    - [`render($context = null)`](#rendercontext--null)
   - [Template](#template)
   - [Factory & ViewAwareTrait](#factory--viewawaretrait)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -82,7 +82,7 @@ use TypistTech\WPKsesView\View;
 $template = '/path/to/template.php';
 $view = new Factory::build($template);
 
-$view->echoKses();
+$view->render();
 // This echos:
 // <h1>Hello World!</h1>
 // <p>Using PHP echo</p>
@@ -114,7 +114,7 @@ $context = (object) [
 ];
 $view = new Factory::build($template);
 
-$view->echoKses($context);
+$view->render($context);
 // This echos:
 // Daenerys Targaryen has 3 dragons.
 ```
@@ -141,16 +141,16 @@ $view = new View(
 );
 ```
 
-#### `echoKses($context = null)`
+#### `render($context = null)`
 
-Echo safely.
+Echo the view safely with optional context object.
 
  * @param mixed $context Optional. Context object for which to render the view.
 
 ```php
-$view->echoKses();
+$view->render();
 
-$view->echoKses($someObject);
+$view->render($someObject);
 ```
 
 If you pass in a context object, you can reference it in your template as `$context`. 

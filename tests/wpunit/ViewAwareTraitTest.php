@@ -87,7 +87,7 @@ class ViewAwareTraitTest extends WPTestCase
         $closure = $this->subject->getRenderClosure();
         $closure();
 
-        $view->verifyInvokedOnce('echoKses', [$this->subject]);
+        $view->verifyInvokedOnce('render', [$this->subject]);
     }
 
     /** @test */
@@ -103,6 +103,6 @@ class ViewAwareTraitTest extends WPTestCase
 
         $this->subject->render();
 
-        $view->verifyInvokedOnce('echoKses', [$this->subject]);
+        $view->verifyInvokedOnce('render', [$this->subject]);
     }
 }
