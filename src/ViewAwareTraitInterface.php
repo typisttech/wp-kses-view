@@ -23,6 +23,13 @@ use Closure;
 interface ViewAwareTraitInterface
 {
     /**
+     * Render the view safely.
+     *
+     * @return void
+     */
+    public function render();
+
+    /**
      * Returns a closure which render the view with self as the context.
      *
      * @return Closure

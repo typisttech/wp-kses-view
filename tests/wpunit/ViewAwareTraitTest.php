@@ -89,4 +89,20 @@ class ViewAwareTraitTest extends WPTestCase
 
         $view->verifyInvokedOnce('echoKses', [$this->subject]);
     }
+
+    /** @test */
+    public function it_renders_the_view_with_self_as_the_context()
+    {
+        $view = Test::double(View::class);
+        $this->subject->setView(
+            $view->construct(
+                codecept_data_dir('dummy-template.php'),
+                wp_kses_allowed_html('post')
+            )
+        );
+
+        $this->subject->render();
+
+        $view->verifyInvokedOnce('echoKses', [$this->subject]);
+    }
 }
