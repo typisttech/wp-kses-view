@@ -31,6 +31,16 @@ trait ViewAwareTrait
     protected $view;
 
     /**
+     * Render the tabs.
+     *
+     * @return void
+     */
+    public function render()
+    {
+        $this->getView()->echoKses($this);
+    }
+
+    /**
      * Returns a closure which render the view with self as the context.
      *
      * @return Closure
@@ -38,7 +48,7 @@ trait ViewAwareTrait
     public function getRenderClosure(): Closure
     {
         return function () {
-            $this->getView()->echoKses($this);
+            $this->render();
         };
     }
 
