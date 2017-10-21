@@ -57,16 +57,16 @@ class View implements ViewInterface
     }
 
     /**
-     * Echo safely.
+     * Echo the view safely with optional context object.
      *
      * @param mixed $context Optional. Context object for which to render the view.
      *
      * @return void
      */
-    public function echoKses($context = null)
+    public function render($context = null)
     {
         echo wp_kses(
-            $this->render($context),
+            $this->unsafeRender($context),
             $this->allowedHtml
         );
     }
@@ -80,7 +80,7 @@ class View implements ViewInterface
      *
      * @return string HTML string.
      */
-    private function render($context): string
+    private function unsafeRender($context): string
     {
         ob_start();
 

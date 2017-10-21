@@ -31,13 +31,13 @@ trait ViewAwareTrait
     protected $view;
 
     /**
-     * Render the tabs.
+     * Echo the view safely with self as context object.
      *
      * @return void
      */
     public function render()
     {
-        $this->getView()->echoKses($this);
+        $this->getView()->render($this);
     }
 
     /**

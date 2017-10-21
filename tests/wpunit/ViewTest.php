@@ -46,7 +46,7 @@ class ViewTest extends WPTestCase
         $view = new View($template, $allowedHtml);
 
         ob_start();
-        $view->echoKses();
+        $view->render();
         $actual = ob_get_clean();
 
         $this->assertSame('<h1>Hello World!</h1>', rtrim($actual));
@@ -65,7 +65,7 @@ class ViewTest extends WPTestCase
         $view = new View($template, $allowedHtml);
 
         ob_start();
-        $view->echoKses($context);
+        $view->render($context);
         $actual = ob_get_clean();
 
         $this->assertSame('Daenerys Targaryen has 3 dragons.', rtrim($actual));
@@ -80,7 +80,7 @@ class ViewTest extends WPTestCase
         $view = new View($template, $allowedHtml);
 
         ob_start();
-        $view->echoKses();
+        $view->render();
         $actual = ob_get_clean();
 
         $this->assertSame("alert('hacked!');", rtrim($actual));
