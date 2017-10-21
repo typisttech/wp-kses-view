@@ -199,6 +199,7 @@ Here you go:
  * [Sunny](https://github.com/Typisttech/sunny)
  * [WP Cloudflare Guard](https://github.com/TypistTech/wp-cloudflare-guard)
  * [WP Admin Tabs](https://github.com/TypistTech/wp-admin-tabs)
+ * [WP Tabbed Admin Pages](https://github.com/TypistTech/wp-tabbed-admin-pages)
 
 *Add your own plugin [here](https://github.com/TypistTech/wp-kses-view/edit/master/README.md)*
 
