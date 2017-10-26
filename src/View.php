@@ -65,7 +65,21 @@ class View implements ViewInterface
      */
     public function render($context = null)
     {
-        echo wp_kses(
+        // @codingStandardsIgnoreStart
+        echo $this->toHtml($context);
+        // @codingStandardsIgnoreEnd
+    }
+
+    /**
+     * Convert the view to HTML.
+     *
+     * @param mixed $context Optional. Context object for which to render the view.
+     *
+     * @return string
+     */
+    public function toHtml($context = null): string
+    {
+        return wp_kses(
             $this->unsafeRender($context),
             $this->allowedHtml
         );

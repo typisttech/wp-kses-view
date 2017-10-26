@@ -68,7 +68,7 @@ class ViewTest extends WPTestCase
         $view->render($context);
         $actual = ob_get_clean();
 
-        $this->assertSame('Daenerys Targaryen has 3 dragons.', rtrim($actual));
+        $this->assertSame('Daenerys Targaryen has 3 dragons.', $actual);
     }
 
     /** @tests */
@@ -84,5 +84,35 @@ class ViewTest extends WPTestCase
         $actual = ob_get_clean();
 
         $this->assertSame("alert('hacked!');", rtrim($actual));
+    }
+
+    /** @tests */
+    public function it_converts_to_html()
+    {
+        $template = codecept_data_dir('dummy-template.php');
+        $allowedHtml = wp_kses_allowed_html('post');
+
+        $view = new View($template, $allowedHtml);
+
+        $actual = $view->toHtml();
+
+        $this->assertSame('<h1>Hello World!</h1>', rtrim($actual));
+    }
+
+    /** @tests */
+    public function it_converts_to_html_with_context()
+    {
+        $template = codecept_data_dir('dummy-template-with-context.php');
+        $allowedHtml = wp_kses_allowed_html('post');
+        $context = (object) [
+            'name' => 'Daenerys Targaryen',
+            'dragons' => 3,
+        ];
+
+        $view = new View($template, $allowedHtml);
+
+        $actual = $view->toHtml($context);
+
+        $this->assertSame('Daenerys Targaryen has 3 dragons.', $actual);
     }
 }
