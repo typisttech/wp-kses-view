@@ -71,7 +71,7 @@ class View implements ViewInterface
     }
 
     /**
-     * Convert the view to HTML.
+     * Convert the view to safe HTML.
      *
      * @param mixed $context Optional. Context object for which to render the view.
      *
