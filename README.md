@@ -25,14 +25,19 @@ Safely rendering for WordPress, the OOP way.
   - [View](#view)
     - [`__construct(string $template, array $allowedHtml)`](#__constructstring-template-array-allowedhtml)
     - [`render($context = null)`](#rendercontext--null)
+    - [`toHtml($context = null): string`](#tohtmlcontext--null-string)
   - [Template](#template)
   - [Factory & ViewAwareTrait](#factory--viewawaretrait)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Why some HTML tags are stripped out?](#why-some-html-tags-are-stripped-out)
+  - [Is this a plugin?](#is-this-a-plugin)
+  - [What to do when wp.org plugin team tell me to clean up the `vendor` folder?](#what-to-do-when-wporg-plugin-team-tell-me-to-clean-up-the-vendor-folder)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
 - [Support!](#support)
   - [Donate via PayPal *](#donate-via-paypal-)
+  - [Donate Monero](#donate-monero)
+  - [Mine me some Monero](#mine-me-some-monero)
   - [Why don't you hire me?](#why-dont-you-hire-me)
   - [Want to help in other way? Want to be a sponsor?](#want-to-help-in-other-way-want-to-be-a-sponsor)
 - [Developing](#developing)
@@ -127,7 +132,7 @@ $view->render($context);
 
  * @param string $template    Filename of the template to render.
  * @param array  $allowedHtml List of allowed HTML elements.
- 
+
 `$allowedHtml` will later be passed to [`wp_kses`](https://codex.wordpress.org/Function_Reference/wp_kses).
 
 [`wp_kses_allowed_html('post')`](https://codex.wordpress.org/Function_Reference/wp_kses_allowed_html) is a good start if you not sure which HTML tags to use.
@@ -165,12 +170,12 @@ $view->toHtml();
 $view->toHtml($someObject);
 ```
 
-If you pass in a context object, you can reference it in your template as `$context`. 
+If you pass in a context object, you can reference it in your template as `$context`.
 Think `$context` as the `M` in MVC pattern.
 
 ### Template
 
-A template can be anything, not limited to `.php` files. Common use cases are: 
+A template can be anything, not limited to `.php` files. Common use cases are:
  - `.php`
  - `.html`
  - `.js`
@@ -192,10 +197,22 @@ This is the heart of this package, removing dangerous HTML tags during rendering
 
 To allow a HTML tag:
  - Add the tag when instantiating a `view` object.
- 
+
 Check [`wp_kses`'s document](https://codex.wordpress.org/Function_Reference/wp_kses) to learn more.
 
 When in doubt, [`wp_kses_allowed_html('post')`](https://codex.wordpress.org/Function_Reference/wp_kses_allowed_html) is a good start.
+
+### Is this a plugin?
+
+No, this is a package that should be part of your plugin.
+
+### What to do when wp.org plugin team tell me to clean up the `vendor` folder?
+
+Re-install packages via the following command. This package exports only necessary files to `dist`.
+
+```bash
+$ composer install --no-dev --prefer-dist --optimize-autoloader
+```
 
 ### Can two different plugins use this package at the same time?
 
@@ -210,6 +227,7 @@ Here you go:
 
  * [Sunny](https://github.com/Typisttech/sunny)
  * [WP Cloudflare Guard](https://github.com/TypistTech/wp-cloudflare-guard)
+ * [WP Better Settings](https://github.com/TypistTech/wp-better-settings)
  * [WP Admin Tabs](https://github.com/TypistTech/wp-admin-tabs)
  * [WP Tabbed Admin Pages](https://github.com/TypistTech/wp-tabbed-admin-pages)
 
@@ -221,10 +239,31 @@ Here you go:
 
 Love WP Kses View? Help me maintain WP Kses View, a [donation here](https://www.typist.tech/donate/wp-kses-view/) can help with it.
 
+### Donate Monero
+
+Send Monero to my public address: `43fiS7JzAK7eSHCpjTL5J1JYqPb6pvM2dGex7aoFZ5u5e5QRg6NKNnFGXqPh6C53E3M8UvqzemVt43uLgimwDpW41zXUHAp`
+
+### Mine me some Monero
+
+1. Open one of the follow web pages open on your computer
+2. Start the miner
+3. Adjust threads and CPU usages
+4. Keep it running
+
+If you have an AdBlocker:
+
+[https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-kses-view&autostart=1](https://authedmine.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-kses-view&autostart=1)
+
+else:
+
+[https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-kses-view&autostart=1](https://coinhive.com/media/miner.html?key=I2z6pueJaeVCz5dh1uA8cru5Fl108DtH&user=wp-kses-view&autostart=1)
+
 ### Why don't you hire me?
-Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email info@typist.tech
+
+Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email [info@typist.tech](mailto:info@typist.tech)
 
 ### Want to help in other way? Want to be a sponsor?
+
 Contact: [Tang Rufus](mailto:tangrufus@gmail.com)
 
 ## Developing
