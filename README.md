@@ -153,6 +153,18 @@ $view->render();
 $view->render($someObject);
 ```
 
+#### `toHtml($context = null): string`
+
+Convert the view to safe HTML.
+
+ * @param mixed $context Optional. Context object for which to render the view.
+
+```php
+$view->toHtml();
+
+$view->toHtml($someObject);
+```
+
 If you pass in a context object, you can reference it in your template as `$context`. 
 Think `$context` as the `M` in MVC pattern.
 
