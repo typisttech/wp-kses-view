@@ -20,29 +20,66 @@ namespace TypistTech\WPKsesView;
 
 final class Factory
 {
+    const FORM_TAG_ATTRIBUTES = [
+        'accept' => true,
+        'align' => true,
+        'alt' => true,
+        'aria-describedby' => true,
+        'autocomplete' => true,
+        'autofocus' => true,
+        'checked' => true,
+        'col' => true,
+        'dirname' => true,
+        'disabled' => true,
+        'for' => true,
+        'form' => true,
+        'formaction' => true,
+        'formenctype' => true,
+        'formmethod' => true,
+        'formnovalidate' => true,
+        'formtarget' => true,
+        'height' => true,
+        'label' => true,
+        'list' => true,
+        'max' => true,
+        'maxlength' => true,
+        'min' => true,
+        'multiple' => true,
+        'name' => true,
+        'pattern' => true,
+        'placeholder' => true,
+        'readonly' => true,
+        'required' => true,
+        'row' => true,
+        'selected' => true,
+        'size' => true,
+        'src' => true,
+        'step' => true,
+        'type' => true,
+        'value' => true,
+        'width' => true,
+        'wrap' => true,
+    ];
+
     const FORM_HTML = [
         'form' => [
-            'id' => true,
-            'class' => true,
+            'accept-charset' => true,
             'action' => true,
+            'autocomplete' => true,
+            'enctype' => true,
             'method' => true,
-        ],
-        'input' => [
-            'id' => true,
-            'class' => true,
-            'type' => true,
             'name' => true,
-            'value' => true,
-            'checked' => true,
-            'disabled' => true,
-            'aria-describedby' => true,
+            'novalidate' => true,
+            'target' => true,
         ],
-        'textarea' => [
-            'aria-describedby' => true,
-            'col' => true,
-            'disabled' => true,
-            'row' => true,
-        ],
+        'datalist' => self::FORM_TAG_ATTRIBUTES,
+        'fieldset' => self::FORM_TAG_ATTRIBUTES,
+        'input' => self::FORM_TAG_ATTRIBUTES,
+        'legend' => self::FORM_TAG_ATTRIBUTES,
+        'optgroup' => self::FORM_TAG_ATTRIBUTES,
+        'option' => self::FORM_TAG_ATTRIBUTES,
+        'select' => self::FORM_TAG_ATTRIBUTES,
+        'textarea' => self::FORM_TAG_ATTRIBUTES,
     ];
 
     /**
@@ -52,7 +89,7 @@ final class Factory
      *
      * @return View
      */
-    public static function buildAdminPage(string $template): View
+    public static function buildFormPage(string $template): View
     {
         return new View(
             $template,
