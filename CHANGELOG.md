@@ -1,10 +1,25 @@
 # Change Log
 
-## [0.2.0](https://github.com/TypistTech/wp-kses-view/tree/0.2.0) (2017-10-22)
+## [0.3.0](https://github.com/TypistTech/wp-kses-view/tree/0.3.0) (2017-10-27)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.2.0...0.3.0)
+
+**Closed issues:**
+
+- Add `ViewInterface::toHtml\(\)` [\#11](https://github.com/TypistTech/wp-kses-view/issues/11)
+
+**Merged pull requests:**
+
+- Rename: `Factory::buildAdminPage` -\> `::buildFormPage` [\#14](https://github.com/TypistTech/wp-kses-view/pull/14) ([TangRufus](https://github.com/TangRufus))
+- Add `ViewAwareTrait::toHtml\(\)` [\#13](https://github.com/TypistTech/wp-kses-view/pull/13) ([TangRufus](https://github.com/TangRufus))
+- Add `ViewInterface::toHtml\(\)` [\#12](https://github.com/TypistTech/wp-kses-view/pull/12) ([TangRufus](https://github.com/TangRufus))
+- Composer: Suggest `typisttech/wp-tabbed-admin-pages` [\#8](https://github.com/TypistTech/wp-kses-view/pull/8) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.0](https://github.com/TypistTech/wp-kses-view/tree/0.2.0) (2017-10-21)
 [Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.1.0...0.2.0)
 
 **Merged pull requests:**
 
+- Version bump 0.2.0 [\#7](https://github.com/TypistTech/wp-kses-view/pull/7) ([TangRufus](https://github.com/TangRufus))
 - Rename: `ViewInterface::echoKses` -\> `::render` [\#6](https://github.com/TypistTech/wp-kses-view/pull/6) ([TangRufus](https://github.com/TangRufus))
 - Add `ViewAwareTraitInterface::render` [\#5](https://github.com/TypistTech/wp-kses-view/pull/5) ([TangRufus](https://github.com/TangRufus))
 
