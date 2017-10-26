@@ -34,7 +34,7 @@ interface ViewInterface
      *
      * @param mixed $context Optional. Context object for which to render the view.
      *
-     * @return void
+     * @return string
      */
-    public function toHtml($context = null);
+    public function toHtml($context = null): string;
 }

@@ -41,6 +41,16 @@ trait ViewAwareTrait
     }
 
     /**
+     * Convert the view to HTML with self as context object.
+     *
+     * @return string
+     */
+    public function toHtml(): string
+    {
+        return $this->getView()->toHtml($this);
+    }
+
+    /**
      * Returns a closure which render the view with self as the context.
      *
      * @return Closure

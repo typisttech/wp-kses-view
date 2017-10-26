@@ -105,4 +105,21 @@ class ViewAwareTraitTest extends WPTestCase
 
         $view->verifyInvokedOnce('render', [$this->subject]);
     }
+
+    /** @test */
+    public function it_converts_the_view_to_html_with_self_as_the_context()
+    {
+        $view = new View(
+            codecept_data_dir('dummy-template-with-context.php'),
+            wp_kses_allowed_html('post')
+        );
+        $this->subject->setView($view);
+
+        $actual = $this->subject->toHtml();
+
+        $this->assertSame(
+            $view->toHtml($this->subject),
+            $actual
+        );
+    }
 }

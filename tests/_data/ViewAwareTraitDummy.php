@@ -8,6 +8,20 @@ class ViewAwareTraitDummy implements ViewAwareTraitInterface
 {
     use ViewAwareTrait;
 
+    /**
+     * Dummy data.
+     *
+     * @var string
+     */
+    public $name = 'Daenerys Targaryen';
+
+    /**
+     * Dummy data.
+     *
+     * @var int
+     */
+    public $dragons = 3;
+
     public function forceSetView($view)
     {
         $this->view = $view;
