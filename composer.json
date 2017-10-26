@@ -29,7 +29,7 @@
         "php": ">7.0"
     },
     "require-dev": {
-        "codeception/aspect-mock": "^2.0",
+        "codeception/aspect-mock": "^2.1",
         "lucatume/wp-browser": "^1.21",
         "neronmoon/scriptsdev": "^0.1.1",
         "wp-coding-standards/wpcs": "^0.13.1"
@@ -56,7 +56,6 @@
             "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
         ],
         "pre-tag": [
-            "composer update --no-suggest",
             "doctoc README.md",
             "github_changelog_generator --no-verbose"
         ],
