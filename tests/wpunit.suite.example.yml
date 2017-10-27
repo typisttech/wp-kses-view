@@ -3,7 +3,7 @@ modules:
         WPLoader:
             wpRootFolder: "/Users/me/Local Sites/wpadminnotices/app/public"
             dbName: "local"
-            dbHost: "wp-kses-view.local:4026"
+            dbHost: "192.168.93.100:4026"
             dbUser: "root"
             dbPassword: "root"
             domain: "wp-kses-view.local"
