@@ -21,9 +21,4 @@ class ViewAwareTraitDummy implements ViewAwareTraitInterface
      * @var int
      */
     public $dragons = 3;
-
-    public function forceSetView($view)
-    {
-        $this->view = $view;
-    }
 }

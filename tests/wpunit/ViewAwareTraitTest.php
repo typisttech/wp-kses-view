@@ -6,8 +6,6 @@ namespace TypistTech\WPKsesView;
 
 use AspectMock\Test;
 use Codeception\TestCase\WPTestCase;
-use stdClass;
-use UnexpectedValueException;
 
 /**
  * @covers \TypistTech\WPKsesView\ViewAwareTrait
@@ -46,31 +44,6 @@ class ViewAwareTraitTest extends WPTestCase
         $actual = $this->subject->getView();
 
         $this->assertSame($expected, $actual);
-    }
-
-    /** @test */
-    public function it_throws_unexpected_value_exception_when_view_is_null()
-    {
-        $this->tester->expectException(
-            new UnexpectedValueException('View is null. Perhaps you have not set a view object.'),
-            function () {
-                $this->subject->getView();
-            }
-        );
-    }
-
-    /** @test */
-    public function it_throws_unexpected_value_exception_when_view_is_not_an_instance_of_view_interface()
-    {
-        $errorMessage = 'View is not an instance of ViewInterface. Perhaps you have not set a view object.';
-
-        $this->tester->expectException(
-            new UnexpectedValueException($errorMessage),
-            function () {
-                $this->subject->forceSetView(new stdClass());
-                $this->subject->getView();
-            }
-        );
     }
 
     /** @test */
@@ -120,6 +93,21 @@ class ViewAwareTraitTest extends WPTestCase
         $this->assertSame(
             $view->toHtml($this->subject),
             $actual
+        );
+    }
+
+    /** @test */
+    public function it_has_a_default_null_view()
+    {
+        $this->assertAttributeEquals(
+            null,
+            'view',
+            $this->subject
+        );
+
+        $this->assertInstanceOf(
+            NullView::class,
+            $this->subject->getView()
         );
     }
 }
