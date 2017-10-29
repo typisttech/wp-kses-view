@@ -7,7 +7,7 @@ namespace TypistTech\WPKsesView;
 use Codeception\TestCase\WPTestCase;
 
 /**
- * @covers \TypistTech\WPKsesView\View
+ * @covers \TypistTech\WPKsesView\NullView
  */
 class NullViewTest extends WPTestCase
 {
