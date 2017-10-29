@@ -27,7 +27,7 @@ Safely rendering for WordPress, the OOP way.
     - [`render($context = null)`](#rendercontext--null)
     - [`toHtml($context = null): string`](#tohtmlcontext--null-string)
   - [Template](#template)
-  - [Factory & ViewAwareTrait](#factory--viewawaretrait)
+  - [Helpers](#helpers)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Why some HTML tags are stripped out?](#why-some-html-tags-are-stripped-out)
   - [Is this a plugin?](#is-this-a-plugin)
@@ -165,9 +165,9 @@ Convert the view to safe HTML.
  * @param mixed $context Optional. Context object for which to render the view.
 
 ```php
-$view->toHtml();
+$html = $view->toHtml();
 
-$view->toHtml($someObject);
+$htmlWithContext = $view->toHtml($someObject);
 ```
 
 If you pass in a context object, you can reference it in your template as `$context`.
@@ -184,9 +184,9 @@ If you pass in a context object, you can reference it in your template as `$cont
 
 Think templates are `.erb` files under `app/view` directory in a Rails app.
 
-### Factory & ViewAwareTrait
+### Helpers
 
-This package provides `Factory` and `ViewAwareTrait` to reduce boilerplate code for common use cases.
+This package provides `Factory`, `ViewAwareTrait` and `NullView` to reduce boilerplate code for common use cases.
 Check their well-documented source code and their tests to learn more.
 
 ## Frequently Asked Questions

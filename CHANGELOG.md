@@ -1,6 +1,20 @@
 # Change Log
 
-## [0.3.0](https://github.com/TypistTech/wp-kses-view/tree/0.3.0) (2017-10-27)
+## [0.4.0](https://github.com/TypistTech/wp-kses-view/tree/0.4.0) (2017-10-29)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.3.0...0.4.0)
+
+**Closed issues:**
+
+- Add `NullView` [\#21](https://github.com/TypistTech/wp-kses-view/issues/21)
+- Don't throw `UnexpectedValueException` in `ViewAwareTrait::getView` [\#20](https://github.com/TypistTech/wp-kses-view/issues/20)
+
+**Merged pull requests:**
+
+- Add `NullView` and use it as default [\#22](https://github.com/TypistTech/wp-kses-view/pull/22) ([TangRufus](https://github.com/TangRufus))
+- Codeception Example: Change dbHost to IP [\#19](https://github.com/TypistTech/wp-kses-view/pull/19) ([TangRufus](https://github.com/TangRufus))
+- TravisCI: Add PHP 7.2 [\#17](https://github.com/TypistTech/wp-kses-view/pull/17) ([TangRufus](https://github.com/TangRufus))
+
+## [0.3.0](https://github.com/TypistTech/wp-kses-view/tree/0.3.0) (2017-10-26)
 [Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.2.0...0.3.0)
 
 **Closed issues:**
@@ -9,6 +23,7 @@
 
 **Merged pull requests:**
 
+- Version bump 0.3.0 [\#15](https://github.com/TypistTech/wp-kses-view/pull/15) ([TangRufus](https://github.com/TangRufus))
 - Rename: `Factory::buildAdminPage` -\> `::buildFormPage` [\#14](https://github.com/TypistTech/wp-kses-view/pull/14) ([TangRufus](https://github.com/TangRufus))
 - Add `ViewAwareTrait::toHtml\(\)` [\#13](https://github.com/TypistTech/wp-kses-view/pull/13) ([TangRufus](https://github.com/TangRufus))
 - Add `ViewInterface::toHtml\(\)` [\#12](https://github.com/TypistTech/wp-kses-view/pull/12) ([TangRufus](https://github.com/TangRufus))
