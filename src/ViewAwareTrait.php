@@ -31,16 +31,6 @@ trait ViewAwareTrait
     protected $view;
 
     /**
-     * Echo the view safely with self as context object.
-     *
-     * @return void
-     */
-    public function render()
-    {
-        $this->getView()->render($this);
-    }
-
-    /**
      * Convert the view to HTML with self as context object.
      *
      * @return string
@@ -48,18 +38,6 @@ trait ViewAwareTrait
     public function toHtml(): string
     {
         return $this->getView()->toHtml($this);
-    }
-
-    /**
-     * Returns a closure which render the view with self as the context.
-     *
-     * @return Closure
-     */
-    public function getRenderClosure(): Closure
-    {
-        return function () {
-            $this->render();
-        };
     }
 
     /**
@@ -73,13 +51,9 @@ trait ViewAwareTrait
     public function getView(): ViewInterface
     {
         if (null === $this->view) {
-            throw new UnexpectedValueException('View is null. Perhaps you have not set a view object.');
-        }
-
-        if (! $this->view instanceof ViewInterface) {
-            $errorMessage = 'View is not an instance of ViewInterface. Perhaps you have not set a view object.';
-
-            throw new UnexpectedValueException($errorMessage);
+            $this->setView(
+                $this->getDefaultView()
+            );
         }
 
         return $this->view;
@@ -95,5 +69,37 @@ trait ViewAwareTrait
     public function setView(ViewInterface $view)
     {
         $this->view = $view;
+    }
+
+    /**
+     * Default view getter. Used when $view is null.
+     *
+     * @return ViewInterface
+     */
+    protected function getDefaultView(): ViewInterface
+    {
+        return new NullView();
+    }
+
+    /**
+     * Returns a closure which render the view with self as the context.
+     *
+     * @return Closure
+     */
+    public function getRenderClosure(): Closure
+    {
+        return function () {
+            $this->render();
+        };
+    }
+
+    /**
+     * Echo the view safely with self as context object.
+     *
+     * @return void
+     */
+    public function render()
+    {
+        $this->getView()->render($this);
     }
 }
