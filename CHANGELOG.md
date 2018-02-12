@@ -1,5 +1,17 @@
 # Change Log
 
+## [0.4.1](https://github.com/TypistTech/wp-kses-view/tree/0.4.1) (2018-02-12)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.4.0...0.4.1)
+
+**Closed issues:**
+
+- Readme: Clarify `toHtml` returns a string [\#18](https://github.com/TypistTech/wp-kses-view/issues/18)
+
+**Merged pull requests:**
+
+- Misc: Update TravisCI & readme & info [\#25](https://github.com/TypistTech/wp-kses-view/pull/25) ([TangRufus](https://github.com/TangRufus))
+- Test: Fix incorrect `@covers` [\#24](https://github.com/TypistTech/wp-kses-view/pull/24) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.4.0](https://github.com/TypistTech/wp-kses-view/tree/0.4.0) (2017-10-29)
 [Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.3.0...0.4.0)
 
@@ -10,6 +22,7 @@
 
 **Merged pull requests:**
 
+- Version bump 0.4.0 [\#23](https://github.com/TypistTech/wp-kses-view/pull/23) ([TangRufus](https://github.com/TangRufus))
 - Add `NullView` and use it as default [\#22](https://github.com/TypistTech/wp-kses-view/pull/22) ([TangRufus](https://github.com/TangRufus))
 - Codeception Example: Change dbHost to IP [\#19](https://github.com/TypistTech/wp-kses-view/pull/19) ([TangRufus](https://github.com/TangRufus))
 - TravisCI: Add PHP 7.2 [\#17](https://github.com/TypistTech/wp-kses-view/pull/17) ([TangRufus](https://github.com/TangRufus))
