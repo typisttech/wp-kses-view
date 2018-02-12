@@ -10,7 +10,7 @@
  * @copyright 2017 Typist Tech
  * @license   GPL-2.0+
  *
- * @see       https://www.typist.tech/projects/wp-kses-view
+ * @see       https://typist.tech/projects/wp-kses-view
  * @see       https://github.com/TypistTech/wp-kses-view
  */
 
