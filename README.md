@@ -33,6 +33,7 @@ Safely rendering for WordPress, the OOP way.
   - [What to do when wp.org plugin team tell me to clean up the `vendor` folder?](#what-to-do-when-wporg-plugin-team-tell-me-to-clean-up-the-vendor-folder)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
+  - [It looks awesome. Where can I find some more goodies like this?](#it-looks-awesome-where-can-i-find-some-more-goodies-like-this)
 - [Support](#support)
   - [Why don't you hire me?](#why-dont-you-hire-me)
   - [Want to help in other way? Want to be a sponsor?](#want-to-help-in-other-way-want-to-be-a-sponsor)
@@ -229,6 +230,15 @@ Here you go:
 
 *Add your own plugin [here](https://github.com/TypistTech/wp-kses-view/edit/master/README.md)*
 
+### It looks awesome. Where can I find some more goodies like this?
+
+* Articles on Typist Tech's [blog](https://typist.tech)
+* [Tang Rufus' WordPress plugins](https://profiles.wordpress.org/tangrufus#content-plugins) on wp.org
+* More projects on [Typist Tech's GitHub profile](https://github.com/TypistTech)
+* Stay tuned on [Typist Tech's newsletter](https://typist.tech/go/newsletter)
+* Follow [Tang Rufus' Twitter account](https://twitter.com/TangRufus)
+* Hire [Tang Rufus](https://typist.tech/contact) to build your next awesome site
+
 ## Support
 
 Love `wp-kses-view`? Help me maintain it, a [donation here](https://typist.tech/donation/) can help with it.
@@ -265,7 +275,7 @@ $ composer test
 
 We also test all PHP files against [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/) and part of the [WordPress coding standard](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
-Check the code style with ``$ composer check-style`` and fix it with ``$ composer fix-style``.
+Check the code style with ``$ composer check-style``.
 
 ## Feedback
 
