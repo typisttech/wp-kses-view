@@ -3,10 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/typisttech/wp-kses-view/v/stable)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Total Downloads](https://poser.pugx.org/typisttech/wp-kses-view/downloads)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Build Status](https://travis-ci.org/TypistTech/wp-kses-view.svg?branch=master)](https://travis-ci.org/TypistTech/wp-kses-view)
-[![codecov](https://codecov.io/gh/TypistTech/wp-kses-view/branch/master/graph/badge.svg)](https://codecov.io/gh/TypistTech/wp-kses-view)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TypistTech/wp-kses-view/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TypistTech/wp-kses-view/?branch=master)
 [![PHP Versions Tested](http://php-eye.com/badge/typisttech/wp-kses-view/tested.svg)](https://travis-ci.org/TypistTech/wp-kses-view)
-[![StyleCI](https://styleci.io/repos/107187828/shield?branch=master)](https://styleci.io/repos/107187828)
 [![License](https://poser.pugx.org/typisttech/wp-kses-view/license)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://typist.tech/donate/wp-kses-view/)
 [![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://typist.tech/contact/)
@@ -263,19 +260,9 @@ $ composer install
 
 ## Running the Tests
 
-[WP Kses View](https://github.com/TypistTech/wp-kses-view) run tests on [Codeception](http://codeception.com/) and relies [wp-browser](https://github.com/lucatume/wp-browser) to provide WordPress integration.
-Before testing, you have to install WordPress locally and add a [codeception.yml](http://codeception.com/docs/reference/Configuration) file.
-See [*.suite.example.yml](./tests/) for [Local by Flywheel](https://share.getf.ly/v20q1y) configuration examples.
+TODO: Re-add tests.
 
-Actually run the tests:
-
-``` bash
-$ composer test
-```
-
-We also test all PHP files against [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/) and part of the [WordPress coding standard](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
-
-Check the code style with ``$ composer check-style``.
+See: https://github.com/TypistTech/wp-kses-view/commit/45f95d3f1f062c51ddbd8a5da7d6e8317fccff97
 
 ## Feedback
 
