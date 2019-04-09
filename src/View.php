@@ -98,6 +98,7 @@ class View implements ViewInterface
     {
         ob_start();
 
+        // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.IncludingFile
         include $this->template;
 
         return ob_get_clean();

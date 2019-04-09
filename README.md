@@ -3,7 +3,6 @@
 [![Latest Stable Version](https://poser.pugx.org/typisttech/wp-kses-view/v/stable)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Total Downloads](https://poser.pugx.org/typisttech/wp-kses-view/downloads)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Build Status](https://travis-ci.org/TypistTech/wp-kses-view.svg?branch=master)](https://travis-ci.org/TypistTech/wp-kses-view)
-[![PHP Versions Tested](http://php-eye.com/badge/typisttech/wp-kses-view/tested.svg)](https://travis-ci.org/TypistTech/wp-kses-view)
 [![License](https://poser.pugx.org/typisttech/wp-kses-view/license)](https://packagist.org/packages/typisttech/wp-kses-view)
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://typist.tech/donate/wp-kses-view/)
 [![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://typist.tech/contact/)

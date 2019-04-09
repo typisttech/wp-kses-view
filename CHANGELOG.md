@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.4.2](https://github.com/TypistTech/wp-kses-view/tree/0.4.2) (2019-04-09)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.4.1...0.4.2)
+
+**Merged pull requests:**
+
+- Update coding standards; Remove `.github`; Git: Track composer.lock [\#30](https://github.com/TypistTech/wp-kses-view/pull/30) ([TangRufus](https://github.com/TangRufus))
+- Factory: Allow class `attribute`; Remove test related stuffs [\#29](https://github.com/TypistTech/wp-kses-view/pull/29) ([TangRufus](https://github.com/TangRufus))
+- TravisCI: Fix test config [\#28](https://github.com/TypistTech/wp-kses-view/pull/28) ([TangRufus](https://github.com/TangRufus))
+- Only includes `WITH\_COVERAGE=true` in PHP 7.1 [\#27](https://github.com/TypistTech/wp-kses-view/pull/27) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.4.1](https://github.com/TypistTech/wp-kses-view/tree/0.4.1) (2018-02-12)
 [Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.4.0...0.4.1)
 
@@ -9,6 +19,7 @@
 
 **Merged pull requests:**
 
+- Version bump 0.4.1 [\#26](https://github.com/TypistTech/wp-kses-view/pull/26) ([TangRufus](https://github.com/TangRufus))
 - Misc: Update TravisCI & readme & info [\#25](https://github.com/TypistTech/wp-kses-view/pull/25) ([TangRufus](https://github.com/TangRufus))
 - Test: Fix incorrect `@covers` [\#24](https://github.com/TypistTech/wp-kses-view/pull/24) ([TangRufus](https://github.com/TangRufus))
 
