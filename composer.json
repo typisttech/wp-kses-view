@@ -47,15 +47,15 @@
         }
     },
     "scripts": {
-        "style:check": "phpcs",
-        "style:fix": "phpcbf",
-        "pre-tag": [
+        "pretag": [
             "composer update",
             "composer normalize",
             "@style:check",
             "npx doctoc README.md",
             "github_changelog_generator --no-verbose"
-        ]
+        ],
+        "style:check": "phpcs",
+        "style:fix": "phpcbf"
     },
     "support": {
         "email": "wp-kses-view@typist.tech",
