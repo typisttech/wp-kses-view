@@ -89,6 +89,7 @@ trait ViewAwareTrait
     public function getRenderClosure(): Closure
     {
         return function () {
+            // phpcs:ignore WordPressVIPMinimum.Variables.VariableAnalysis.UndefinedVariable
             $this->render();
         };
     }

@@ -24,8 +24,7 @@
         "php": "^7.2"
     },
     "require-dev": {
-        "neronmoon/scriptsdev": "^0.1.1",
-        "wp-coding-standards/wpcs": "^0.13.1"
+        "itinerisltd/itineris-wp-coding-standards": "^0.2.3"
     },
     "suggest": {
         "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library",
@@ -36,12 +35,6 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "scripts-dev": {
-            "post-install-cmd": "@install-dev-extra",
-            "post-update-cmd": "@install-dev-extra"
-        }
     },
     "autoload": {
         "psr-4": {
@@ -54,13 +47,12 @@
         }
     },
     "scripts": {
-        "check-style": "phpcs --standard=ruleset.xml --colors -p -s .",
-        "install-dev-extra": [
-            "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
-        ],
+        "style:check": "phpcs",
+        "style:fix": "phpcbf",
         "pre-tag": [
             "composer update",
             "composer normalize",
+            "@style:check",
             "npx doctoc README.md",
             "github_changelog_generator --no-verbose"
         ]
