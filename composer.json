@@ -20,17 +20,10 @@
             "role": "Developer"
         }
     ],
-    "support": {
-        "email": "wp-kses-view@typist.tech",
-        "issues": "https://github.com/TypistTech/wp-kses-view/issues",
-        "source": "https://github.com/TypistTech/wp-kses-view"
-    },
     "require": {
-        "php": ">7.0"
+        "php": "^7.2"
     },
     "require-dev": {
-        "codeception/aspect-mock": "^2.1",
-        "lucatume/wp-browser": "^2.0",
         "neronmoon/scriptsdev": "^0.1.1",
         "wp-coding-standards/wpcs": "^0.13.1"
     },
@@ -40,6 +33,15 @@
         "typisttech/wp-better-settings": "A simplified OOP implementation of the WP Settings API",
         "typisttech/wp-contained-hook": "Lazily instantiate objects from dependency injection container to WordPress hooks (actions and filters)",
         "typisttech/wp-tabbed-admin-pages": "Create WordPress admin pages with tabbed navigations, the OOP way"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "scripts-dev": {
+            "post-install-cmd": "@install-dev-extra",
+            "post-update-cmd": "@install-dev-extra"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -57,20 +59,15 @@
             "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
         ],
         "pre-tag": [
-            "doctoc README.md",
+            "composer update",
+            "composer normalize",
+            "npx doctoc README.md",
             "github_changelog_generator --no-verbose"
-        ],
-        "test": "codecept run",
-        "test:coverage": "codecept run --coverage --coverage-xml --coverage-html",
-        "test:wpunit": "codecept run wpunit"
+        ]
     },
-    "extra": {
-        "scripts-dev": {
-            "post-install-cmd": "@install-dev-extra",
-            "post-update-cmd": "@install-dev-extra"
-        }
-    },
-    "config": {
-        "sort-packages": true
+    "support": {
+        "email": "wp-kses-view@typist.tech",
+        "issues": "https://github.com/TypistTech/wp-kses-view/issues",
+        "source": "https://github.com/TypistTech/wp-kses-view"
     }
 }

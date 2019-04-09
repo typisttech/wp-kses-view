@@ -1,9 +1,0 @@
-modules:
-    config:
-        WPLoader:
-            wpRootFolder: "/Users/me/Local Sites/wpksesview/app/public"
-            dbName: "local"
-            dbHost: "192.168.93.100:4026"
-            dbUser: "root"
-            dbPassword: "root"
-            domain: "wp-kses-view.local"

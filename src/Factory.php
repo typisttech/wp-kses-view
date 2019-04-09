@@ -28,6 +28,7 @@ final class Factory
         'autocomplete' => true,
         'autofocus' => true,
         'checked' => true,
+        'class' => true,
         'col' => true,
         'dirname' => true,
         'disabled' => true,
