@@ -1,10 +1,20 @@
 # Change Log
 
+## [0.5.0](https://github.com/TypistTech/wp-kses-view/tree/0.5.0) (2019-04-23)
+[Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.4.2...0.5.0)
+
+**Merged pull requests:**
+
+- View: ::getRenderCallable --\> ::getRenderClosure [\#34](https://github.com/TypistTech/wp-kses-view/pull/34) ([TangRufus](https://github.com/TangRufus))
+- Apply code style [\#33](https://github.com/TypistTech/wp-kses-view/pull/33) ([TangRufus](https://github.com/TangRufus))
+- Add `ViewInterface::getRenderCallable\($context = null\): callable` [\#32](https://github.com/TypistTech/wp-kses-view/pull/32) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.4.2](https://github.com/TypistTech/wp-kses-view/tree/0.4.2) (2019-04-09)
 [Full Changelog](https://github.com/TypistTech/wp-kses-view/compare/0.4.1...0.4.2)
 
 **Merged pull requests:**
 
+- Version bump 0.4.2 [\#31](https://github.com/TypistTech/wp-kses-view/pull/31) ([TangRufus](https://github.com/TangRufus))
 - Update coding standards; Remove `.github`; Git: Track composer.lock [\#30](https://github.com/TypistTech/wp-kses-view/pull/30) ([TangRufus](https://github.com/TangRufus))
 - Factory: Allow class `attribute`; Remove test related stuffs [\#29](https://github.com/TypistTech/wp-kses-view/pull/29) ([TangRufus](https://github.com/TangRufus))
 - TravisCI: Fix test config [\#28](https://github.com/TypistTech/wp-kses-view/pull/28) ([TangRufus](https://github.com/TangRufus))
