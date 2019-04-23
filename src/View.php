@@ -103,4 +103,19 @@ class View implements ViewInterface
 
         return ob_get_clean();
     }
+
+    /**
+     * Callable to echo the view safely with self as context object.
+     *
+     * @param mixed $context Optional. Context object for which to render the view.
+     *
+     * @return callable
+     */
+    public function getRenderCallable($context = null): callable
+    {
+        return function () use ($context) {
+            // phpcs:ignore WordPressVIPMinimum.Variables.VariableAnalysis.UndefinedVariable
+            $this->render($context);
+        };
+    }
 }
