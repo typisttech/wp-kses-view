@@ -65,9 +65,8 @@ class View implements ViewInterface
      */
     public function render($context = null)
     {
-        // @codingStandardsIgnoreStart
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $this->toHtml($context);
-        // @codingStandardsIgnoreEnd
     }
 
     /**
