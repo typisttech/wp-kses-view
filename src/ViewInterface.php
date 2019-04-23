@@ -18,6 +18,8 @@ declare(strict_types=1);
 
 namespace TypistTech\WPKsesView;
 
+use Closure;
+
 interface ViewInterface
 {
     /**
@@ -39,11 +41,11 @@ interface ViewInterface
     public function toHtml($context = null): string;
 
     /**
-     * Closure to echo the view safely with self as context object.
+     * Returns a closure which render the view.
      *
-     * @param mixed $context Optional. Context object for which to render the view.
+     * @param mixed|null $context Optional. Context object for which to render the view.
      *
-     * @return callable
+     * @return Closure
      */
-    public function getRenderCallable($context = null): callable;
+    public function getRenderClosure($context = null): Closure;
 }

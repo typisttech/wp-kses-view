@@ -18,6 +18,7 @@ declare(strict_types=1);
 
 namespace TypistTech\WPKsesView;
 
+use Closure;
 use InvalidArgumentException;
 
 class View implements ViewInterface
@@ -104,13 +105,13 @@ class View implements ViewInterface
     }
 
     /**
-     * Callable to echo the view safely with self as context object.
+     * Returns a closure which render the view.
      *
-     * @param mixed $context Optional. Context object for which to render the view.
+     * @param mixed|null $context Optional. Context object for which to render the view.
      *
-     * @return callable
+     * @return Closure
      */
-    public function getRenderCallable($context = null): callable
+    public function getRenderClosure($context = null): Closure
     {
         return function () use ($context) {
             // phpcs:ignore WordPressVIPMinimum.Variables.VariableAnalysis.UndefinedVariable
