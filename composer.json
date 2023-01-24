@@ -21,10 +21,10 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^8.1"
     },
     "require-dev": {
-        "itinerisltd/itineris-wp-coding-standards": "^0.2.3"
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.1"
     },
     "suggest": {
         "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library",
@@ -34,7 +34,10 @@
         "typisttech/wp-tabbed-admin-pages": "Create WordPress admin pages with tabbed navigations, the OOP way"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "autoload": {
         "psr-4": {
